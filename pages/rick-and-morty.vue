@@ -1,10 +1,12 @@
 <template>
   <main>
     <NavBar />
-    <h1>Hello Bluehouse Group</h1>
+    <h1>Rick and Morty page</h1>
   </main>
 </template>
 
 <script>
-export default {}
+export default {
+
+}
 </script>
