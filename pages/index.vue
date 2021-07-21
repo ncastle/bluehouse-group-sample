@@ -1,5 +1,7 @@
 <template>
-  <Tutorial />
+  <main>
+    <h1>Hello Bluehouse Group</h1>
+  </main>
 </template>
 
 <script>
