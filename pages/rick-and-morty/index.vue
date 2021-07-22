@@ -15,15 +15,15 @@
 
 <script>
 export default {
-  async asyncData ({ $http }) {
-    // base url to rick and morty api endpoint
-    const baseUrl = 'https://api.sampleapis.com/rickandmorty/'
+  async created () {
+    await this.$store.dispatch('fetchCharacters', { self: this })
+    console.log('printing after created / dispatch?')
+  },
 
-    // get data from each of the characters api endpoint
-    const characters = await $http.$get(baseUrl + 'characters')
-    console.log({ characters })
-
-    return { characters }
+  computed: {
+    characters () {
+      return this.$store.getters.getAllCharacters
+    }
   }
 }
 </script>
