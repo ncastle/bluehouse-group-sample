@@ -1,15 +1,14 @@
 <template>
   <div>
     <NavBar />
-    Hello I am route rick-and-morty/id
-    {{ $route.params.id }}
-    {{ character }}
-
+    <DetailedCharacterCard
+      v-if=character
+      :character=character
+    />
   </div>
 </template>
 
 <script>
-
 export default {
   computed: {
     character () {
