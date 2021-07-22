@@ -11,6 +11,7 @@
 
     <div class="container">
 
+      <!-- show a list of filtered characters if user searches -->
       <template v-if="filteredCharacters">
         <CharacterCard
           v-for="char in filteredCharacters"
@@ -19,6 +20,7 @@
         />
       </template>
 
+      <!-- otherwise show all of the characters -->
       <template v-else>
         <CharacterCard
           v-for="char in characters"
@@ -46,6 +48,7 @@ export default {
     }
   },
   methods: {
+    // will filter the character list based on user input
     search () {
       this.filteredCharacters = this.characters.filter((char) => {
         const name = char.name.toLowerCase()
@@ -53,6 +56,7 @@ export default {
         return name.includes(input)
       })
     },
+    // resets the filtered characters and displays all characters
     reset () {
       this.filteredCharacters = null
       this.input = ''
