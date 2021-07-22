@@ -1,8 +1,8 @@
 <template>
-  <div class="card">
+  <NuxtLink :to="`/rick-and-morty/${characterInfo.id}`" class="card link">
     <h3 class="name">{{ characterInfo.name }}</h3>
-    <img :src="characterInfo.image" alt={} class="image">
-  </div>
+    <img :src="characterInfo.image" alt="character" class="image">
+  </NuxtLink>
 </template>
 
 <script>
@@ -23,6 +23,14 @@ export default {
     background-color: #e0e0e0;
     margin: 1rem;
     padding: 1rem;
+  }
+  .link {
+    color: black;
+    text-decoration: none;
+    :hover {
+      color: inherit;
+      text-decoration: inherit;
+    }
   }
   .image {
     width: 100px;
