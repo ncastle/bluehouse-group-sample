@@ -14,12 +14,12 @@
 <style lang="scss" scoped>
 
   #nav-bar {
-    width: 100vw;
+    max-width: 100vw;
     height: 5vh;
     background-color: grey;
 
     ul {
-      width: 100vw;
+      width: inherit;
       height: inherit;
       list-style-type: none;
       display: flex;

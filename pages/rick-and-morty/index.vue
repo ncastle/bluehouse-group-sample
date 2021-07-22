@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <h1 class="center header">Rick and Morty page</h1>
 
     <h3 class="center">Search characters by name:</h3>

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <DetailedCharacterCard
       v-if=character
       :character=character
